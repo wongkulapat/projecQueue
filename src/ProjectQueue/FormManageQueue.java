@@ -65,16 +65,16 @@ public class FormManageQueue extends javax.swing.JFrame {
 
         List<Passenger> passList = service.findAllPassenger();
         Iterator<Passenger> cu = passList.iterator();
-        int count = 0;
+        int Count = 0;
         try {
             while (cu.hasNext()) {
                 Passenger passenger = cu.next();
                 System.out.println(passenger.getPassengerFN());
                 if (passenger.getPassengerID().equals(txtIdPassenger.getText())) {
                     txtNamePassenger.setText(passenger.getPassengerFN());
-                    count ++;
+                    Count ++;
                 }
-            }if(count==0){
+            }if(Count==0){
                  alertMessage("ไม่มี ID ลูกค้านี้ในระบบ");
             }
 
